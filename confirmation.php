@@ -177,7 +177,7 @@
             text-align: right;
         }
 
-        h1, h2, h3, h4, h5, h6, p, form {
+        h1, h2, h3, h4, h5, h6, p {
            color:white; 
         }
 
@@ -219,65 +219,8 @@
   </head>
 <body>
     <div style="margin-left:5%;padding:1px;height:100px;">
-        <h1>Book an appointment</h1>
-        <h2>Please select your personal Supervisor below:</h2>
-        <p>NOTE: Only Dr Chandrasekhar Kambhampati has agreed to use PSSST during pre-alpha, no other supervisors are using PSSST at this time.</p>
-        <p>Supervisor: <select name="supervisors" id="sups" onchange="supchange()" form="mover">
-            <option value="">Select...</option>
-            <option value="Dr Chandrasekhar Kambhampati">Dr Chandrasekhar Kambhampati</option>
-        </select></p>
-        <p id="selsups"></p>
-        <p>Date: <select hidden name="day" id="days" onchange="datechange()" form="mover">
-            <option value="">Select...</option>
-        </select></p>
-        <p id="selday"></p>
-        <p>Time: <select hidden name="time" id="time" onchange="timechange()" form="mover">
-            <option value="">Select...</option>
-        </select></p>
-        <p id="overall"></p>
-        <form action="/#" method="get" id="mover">
-            <label hidden id="CAPTCHA" for="CAPTCHA">CAPTCHA:</label>
-            <input hidden type="text" id="CAPTCHAbox" name="CAPTCHA" onchange="captcha()"><br><br>
-            <input hidden id="submit" type="submit" value="Submit">
-        </form>
-    </div>
-    <script>function supchange() {
-        var sup = document.getElementById("sups").value;
-        document.getElementById("selsups").innerHTML = "You have selected: " + sup;
-        setTimeout(() => {
-            document.getElementById("days").options.add(new Option("Monday 20th May", "Monday 20th May")),
-            document.getElementById("days").options.add(new Option("Tuesday 21st May", "Tuesday 21st May")),
-            document.getElementById("days").options.add(new Option("Wednesday 22nd May", "Wednesday 22nd May")),
-            document.getElementById("days").options.add(new Option("Thursday 23rd May", "Thursday 23rd May")),
-            document.getElementById("days").options.add(new Option("Friday 24th May", "Friday 24th May")),
-            document.getElementById("days").removeAttribute('hidden');
-        }, 250);
-    }
-
-    function datechange() {
-        var day = document.getElementById("days").value;
-        document.getElementById("selday").innerHTML = "You have selected: " + day;
-        setTimeout(() => {
-            document.getElementById("time").options.add(new Option("10:30 - 11:00", "10:30 - 11:00")),
-            document.getElementById("time").options.add(new Option("14:00 - 14:30", "14:00 - 14:30")),
-            document.getElementById("time").options.add(new Option("16:15 - 16:45", "16:15 - 16:45")),
-            document.getElementById("time").removeAttribute('hidden');
-        }, 250)
-    }
-
-    function timechange() {
-        var sup = document.getElementById("sups").value;
-        var day = document.getElementById("days").value;
-        var time = document.getElementById("time").value;
-        document.getElementById("overall").innerHTML = "Your appointment is as follows:" + "<br />" +"Supervisor: " + sup + "<br />" + " Date: " + day + "<br />" + "Time: " + time + "<br />" + "Location: Teams " + "<br />"+ "<br />" + "Please enter the following CAPTCHA: o7D2e43";
-        document.getElementById("CAPTCHA").removeAttribute('hidden')
-        document.getElementById("CAPTCHAbox").removeAttribute('hidden')
-    }
-
-    function captcha() {
-        document.getElementById("submit").removeAttribute('hidden');
-    }
-    </script>
+        <h1>Appointment Booked</h1>
+        <h2>Your Appointment details are below:</h2>
     <footer>
         <div class="footer" id="footer">
           <p>A <a class="contact" href="/">BOLD</a> Website</p>
