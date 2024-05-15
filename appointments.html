@@ -235,10 +235,10 @@
             <option value="">Select...</option>
         </select></p>
         <p id="overall"></p>
-        <form action="/confirmation" method="get" id="mover">
+        <form action="C:/Users/jackh/source/repos/uiux/confirmation.html" id="mover">
             <label hidden id="CAPTCHA" for="CAPTCHA">CAPTCHA:</label>
             <input hidden type="text" id="CAPTCHAbox" name="CAPTCHA" onchange="captcha()"><br><br>
-            <input hidden id="submit" type="submit" value="Submit">
+            <input hidden id="submit" type="submit" value="Submit" onclick="getInfo()">
         </form>
     </div>
     <script>function supchange() {
@@ -276,6 +276,15 @@
 
     function captcha() {
         document.getElementById("submit").removeAttribute('hidden');
+    }
+
+    function getInfo(){
+        var supervisor = document.getElementById("supervisors").value;
+        var day = document.getElementById("days").value; 
+        var time = document.getElementById("time").value;
+        localStorage.setItem("txtValue", supervisor);
+        localStorage.setItem("txtValue1", day);
+        localStorage.setItem("txtValue3", time); 
     }
     </script>
     <footer>

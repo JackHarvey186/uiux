@@ -221,9 +221,16 @@
     <div style="margin-left:5%;padding:1px;height:100px;">
         <h1>Appointment Booked</h1>
         <h2>Your Appointment details are below:</h2>
-        <?php $supervisors=$_GET["supervisors"];
-        echo "Supervisor $supervisors";   
-        ?>
+        <p>Supervisor:<span id="sup"></span></p>
+        <p>Date:<span id="date"></span></p>
+        <p>Time:<span id="time"></span></p>
+    </div>
+    <script>
+        //displaying the value from local storage to another page by their respective Ids
+        document.getElementById("sup").innerHTML=localStorage.getItem("txtValue");
+        document.getElementById("date").innerHTML=localStorage.getItem("txtValue1");
+        document.getElementById("time").innerHTML=localStorage.getItem("txtValue2");
+    </script>
     <footer>
         <div class="footer" id="footer">
           <p>A <a class="contact" href="/">BOLD</a> Website</p>
