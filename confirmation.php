@@ -213,14 +213,17 @@
         <a class="img" href="/">
             <img alt="PSSST" src="Pssst24.png" width="100" height="25">
         </a>
-        <a class="clickables" href="/appointments.html">Appointments</a>
+        <a class="clickables" href="C:/Users/jackh/source/repos/uiux/appointments.html">Appointments</a>
     </div>
-    <title>UI/UX Interface - PSSST</title>
+    <title>UI/UX Interface - PSSST - Confirmation</title>
   </head>
 <body>
     <div style="margin-left:5%;padding:1px;height:100px;">
         <h1>Appointment Booked</h1>
         <h2>Your Appointment details are below:</h2>
+        <?php $supervisors=$_GET["supervisors"];
+        echo "Supervisor $supervisors";   
+        ?>
     <footer>
         <div class="footer" id="footer">
           <p>A <a class="contact" href="/">BOLD</a> Website</p>
