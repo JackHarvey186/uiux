@@ -213,11 +213,11 @@
         <a class="img" href="/">
             <img alt="PSSST" src="Pssst24.png" width="100" height="25">
         </a>
-        <a class="clickables" href="C:/Users/jackh/source/repos/uiux/appointments.html">Appointments</a>
+        <a class="clickables" href="/appointments.html">Appointments</a>
     </div>
     <title>UI/UX Interface - PSSST - Confirmation</title>
   </head>
-<body>
+<body onload="setdata();">
     <div style="margin-left:5%;padding:1px;height:100px;">
         <h1>Appointment Booked</h1>
         <h2>Your Appointment details are below:</h2>
@@ -227,11 +227,10 @@
     </div>
     <script>
     function setdata() {
-        document.getElementById("sup").innerHTML=localStorage.getItem("txtValue");
-        document.getElementById("date").innerHTML=localStorage.getItem("txtValue1");
-        document.getElementById("time").innerHTML=localStorage.getItem("txtValue2");
+        document.getElementById("sup").innerHTML= $localStorage.getItem("txtValue");
+        document.getElementById("date").innerHTML= $localStorage.getItem("txtValue1");
+        document.getElementById("time").innerHTML= $localStorage.getItem("txtValue2");
     }
-    window.onload = setdata();
     </script>
     <footer>
         <div class="footer" id="footer">
