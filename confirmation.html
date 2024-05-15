@@ -226,10 +226,12 @@
         <p>Time:<p id="time"></p></p>
     </div>
     <script>
-        //displaying the value from local storage to another page by their respective Ids
+    function setdata() {
         document.getElementById("sup").innerHTML=localStorage.getItem("txtValue");
         document.getElementById("date").innerHTML=localStorage.getItem("txtValue1");
         document.getElementById("time").innerHTML=localStorage.getItem("txtValue2");
+    }
+    window.onload = setdata();
     </script>
     <footer>
         <div class="footer" id="footer">
