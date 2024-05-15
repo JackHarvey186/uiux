@@ -221,13 +221,13 @@
     <div style="margin-left:5%;padding:1px;height:100px;">
         <h1>Appointment Booked</h1>
         <h2>Your Appointment details are below:</h2>
-        <p>Supervisor:<p id="sup"></p></p>
-        <p>Date:<p id="date"></p></p>
-        <p>Time:<p id="time"></p></p>
+        <p>Supervisor:<span id="sup"></span></p>
+        <p>Date:<span id="date"></span></p>
+        <p>Time:<span id="time"></span></p>
     </div>
     <script>
     function setdata() {
-        document.getElementById("sup").innerHTML= "" + localStorage.getItem("Sup");
+        document.getElementById("sup").innerHTML= "" + localStorage.getItem("sup");
         document.getElementById("date").innerHTML= "" + localStorage.getItem("day");
         document.getElementById("time").innerHTML= "" + localStorage.getItem("time");
     }
