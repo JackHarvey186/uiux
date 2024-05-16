@@ -177,7 +177,7 @@
             text-align: right;
         }
 
-        h1, h2, h3, h4, h5, h6, p {
+        h1, h2, h3, h4, h5, h6, p, form {
            color:white; 
         }
 
@@ -213,27 +213,19 @@
         <a class="img" href="/">
             <img alt="PSSST" src="Pssst24.png" width="100" height="25">
         </a>
-        <a class="clickables" href="/appointments.html">Appointments</a>
+        <a class="clickables" href="/appointments.html">Appointment</a>
     </div>
-    <title>UI/UX Interface - PSSST - Confirmation</title>
+    <title>UI/UX Interface - PSSST - Logged In</title>
   </head>
-<body onload="setdata();">
+<body>
     <div style="margin-left:5%;padding:1px;height:100px;">
-        <h1>Appointment Booked</h1>
-        <h2>Your Appointment details are below:</h2>
-        <p>Supervisor:<span id="sup"></span></p>
-        <p>Date:<span id="date"></span></p>
-        <p>Time:<span id="time"></span></p>
+        <h1>Logged in.</h1>
+        <p>Your Student Number:<span id="usrn"></span></p>
     </div>
     <script>
     function setdata() {
-        document.getElementById("sup").innerHTML= " " + localStorage.getItem("sup");
-        document.getElementById("date").innerHTML= " " + localStorage.getItem("day");
-        document.getElementById("time").innerHTML= "" + localStorage.getItem("time");
-    }
-    function setuser() {
-        document.getElementById("sup").innerHTML= " " + localStorage.getItem("sup");
-        document.getElementById("date").innerHTML= " " + localStorage.getItem("day");
+        document.getElementById("usrn").innerHTML= " " + localStorage.getItem("usrn");
+        document.getElementById("psw").innerHTML= " " + localStorage.getItem("psw");
     }
     </script>
     <footer>
