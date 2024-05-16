@@ -220,12 +220,11 @@
 <body>
     <div style="margin-left:5%;padding:1px;height:100px;">
         <h1>Logged in.</h1>
-        <p>Your Student Number:<span id="usrn"></span></p>
+        <p>Your Student Number:<span id="user"></span></p>
     </div>
     <script>
     function setdata() {
-        document.getElementById("usrn").innerHTML= " " + localStorage.getItem("usrn");
-        document.getElementById("psw").innerHTML= " " + localStorage.getItem("psw");
+        document.getElementById("user").innerHTML= " " + localStorage.getItem("user");
     }
     </script>
     <footer>

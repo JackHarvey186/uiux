@@ -222,17 +222,17 @@
         <h1>Login</h1>
         <p>NOTE: PSSST has no access to the University of Hull's logon servers, please log into your account as usual. No data is saved.</p>
         <form action="/loggedin.html" id="mover">
-            <label id="username" for="usern">Student Number:</label>
-            <input type="text" id="usern" name="usern"><br><br>
-            <label id="username" for="usern">Password:</label>
-            <input type="password" id="psw" name="psw"><br><br>
+            <label id="usrn" for="usern">Student Number:</label>
+            <input type="text" id="user" name="usern"><br><br>
+            <label id="psw" for="password">Password:</label>
+            <input type="password" id="psw" name="password"><br><br>
             <input id="submit" type="submit" value="Submit" onclick="getInfo()">
         </form>
     </div>
     <script>
     function getInfo(){
-        var usrn = document.getElementById("usern").value;
-        localStorage.setItem("usern", usrn);
+        var user = document.getElementById("usrn").value;
+        localStorage.setItem("user", user);
     }
     </script>
     <footer>
