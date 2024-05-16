@@ -227,9 +227,9 @@
         <form>
             <label style="color: white;" id="feedback" for="feedback">Meeting Feedback:</label>
             <input style="size: 100px;" id="feedback" type="text"></input>
-            <input id="submit" type="submit" value="Submit" onclick="feedback()">
-            <p hidden id="thanks">Thank you for your feedback!</P>
         </form>
+        <button id="submit" value="Submit" onclick="feedback()">Submit</button>
+        <p hidden id="thx">Thank you for your feedback!</p>
     </div>
     <script>
     function setdata() {
@@ -239,7 +239,7 @@
     }
 
     function feedback(){
-        document.getElementById("thanks").removeAttribute('hidden');
+        document.getElementById("thx").removeAttribute('hidden');
     }
     </script>
     <footer>
