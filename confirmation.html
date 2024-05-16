@@ -225,10 +225,10 @@
         <p>Date:<span id="date"></span></p>
         <p>Time:<span id="time"></span></p>
         <form>
-            <label hidden id="feedback" for="feedback">Meeting Feedback:</label>
+            <label id="feedback" for="feedback">Meeting Feedback:</label>
             <input id="feedback" type="text"></input>
             <input id="submit" type="submit" value="Submit" onclick="feedback()">
-            <P id="thanks" hidden>Thank you for your feedback!</P>
+            <P hidden id="thanks">Thank you for your feedback!</P>
         </form>
     </div>
     <script>
@@ -239,7 +239,7 @@
     }
 
     function feedback(){
-        document.getElementById("thanks").removeAttribute('hidden')
+        document.getElementById("thanks").removeAttribute('hidden');
     }
     </script>
     <footer>
